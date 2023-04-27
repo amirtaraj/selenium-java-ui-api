@@ -414,8 +414,8 @@ public class PredefinedStepDefinitions extends AbstractPage {
 
     // wait for specific period of time
     @Then("^I wait for (\\d+) sec$")
-    public void wait(String time) throws NumberFormatException, InterruptedException {
-        progressObj.wait(time);
+    public synchronized void wait(int time) throws InterruptedException {
+        Thread.sleep(time * 1000);
     }
 
     // wait for specific element to display for specific period of time
@@ -460,6 +460,8 @@ public class PredefinedStepDefinitions extends AbstractPage {
     public void print_config() {
         configObj.printDesktopConfiguration();
     }
+
+
 
 //    @After
 //    // Take Screen shot only when a scenario is failed

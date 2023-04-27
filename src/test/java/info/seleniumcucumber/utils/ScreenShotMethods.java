@@ -18,9 +18,9 @@ public class ScreenShotMethods extends AbstractPage {
      */
     public void takeScreenShot() throws IOException {
         File scrFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-        DateFormat dateFormat = new SimpleDateFormat("MMMM-dd-yyyy-z-HH:mm:ss", Locale.ENGLISH);
+        DateFormat dateFormat = new SimpleDateFormat("MMMM-dd-yyyy-z-HH-mm-ss", Locale.ENGLISH);
         Calendar cal = Calendar.getInstance();
-        //System.out.println(dateFormat.format(cal.getTime()));
-        FileUtils.copyFile(scrFile, new File("screenShots/" + dateFormat.format(cal.getTime()) + ".png"));
+        System.out.println(dateFormat.format(cal.getTime()));
+        FileUtils.copyFile(scrFile, new File("D:/Develop/selenium-cucumber-java/screenShots/" + dateFormat.format(cal.getTime()) + ".png"));
     }
 }
