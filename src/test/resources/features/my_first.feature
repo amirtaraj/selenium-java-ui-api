@@ -1,5 +1,5 @@
-Feature: Login
-  As a user I should able to login into my app
+Feature: ODNxt
+  As a user I should able to navigate to ODNXT app
 
   Scenario: Dashboard Page
     Given I navigate to "https://odnxt-web-automation-template.azurewebsites.net/"
