@@ -11,6 +11,11 @@
         <slf4j.version>1.7.21</slf4j.version>
         <browser>chrome</browser>
         <cloud_config>cloud_config</cloud_config>
+         <rest.assured.version>4.3.0</rest.assured.version>
+         <org.slf4j.api.version>1.7.30</org.slf4j.api.version>
+        <ch.qos.logback.version>1.2.3</ch.qos.logback.version>
+        <json.simple.version>1.1.1</json.simple.version>
+        <gson.version>2.10.1</gson.version>
     </properties>
 
     <developers>
@@ -34,7 +39,40 @@
             <artifactId>webdrivermanager</artifactId>
             <version>5.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest.assured.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.api.version}</version>
+        </dependency>
+         <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>${json.simple.version}</version>
+            <scope>test</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${ch.qos.logback.version}</version>
+        </dependency>
         <dependency>
             <artifactId>cucumber-java</artifactId>
             <groupId>io.cucumber</groupId>
