@@ -10,6 +10,7 @@ import info.seleniumcucumber.utils.RestUtils;
 import info.seleniumcucumber.utils.ConfigUtils;
 import io.restassured.response.Response;
 import static org.junit.Assert.assertEquals;
+import java.io.IOException;
 public class ApiStepDefinitions extends AbstractPage {
 
     private Response response;
@@ -57,5 +58,20 @@ public class ApiStepDefinitions extends AbstractPage {
     @Then("I should receive a response with status code {int}")
     public void checkStatusCode(int expectedStatusCode) {
         assertEquals(expectedStatusCode, RestUtils.response.getStatusCode());
+    }
+
+    @When("I perform a POST request to with payload {string}")
+    public void performPostRequest(String payload) throws IOException {
+        RestUtils.performPostRequest(payload);
+    }
+
+    @When("I perform a PUT request to with payload {string}")
+    public void putRequest(String payload) throws IOException {
+        response = RestUtils.performPutRequest(payload);
+    }
+
+    @When("I perform a DELETE request")
+    public void deleteRequest(){
+        response = RestUtils.performDeleteRequest();
     }
 }
