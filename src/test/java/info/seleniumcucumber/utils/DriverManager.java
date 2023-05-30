@@ -136,7 +136,7 @@ public class DriverManager {
             File appFile = new File(appPath);
             if (appFile.exists()) {
                 // prop.setProperty("app", appPath);
-                SauceLabsFileManager.uploadAppToSauceStorage(appName, appPath, prop);
+               // SauceLabsFileManager.uploadAppToSauceStorage(appName, appPath, prop);
             } else {
                 System.out.println("Exception : No app with name '" + appName + "' found in appUnderTest directory");
                 System.exit(0);

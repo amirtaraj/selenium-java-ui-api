@@ -1,12 +1,13 @@
 package info.seleniumcucumber.utils;
 
-import info.seleniumcucumber.pages.AbstractPage;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import info.seleniumcucumber.pages.AbstractPage;
 
 public class NavigateMethods extends AbstractPage implements BaseTest {
     private final SelectElementByType selectElementByType = new SelectElementByType();

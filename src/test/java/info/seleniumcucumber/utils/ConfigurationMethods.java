@@ -1,8 +1,9 @@
 package info.seleniumcucumber.utils;
 
-import info.seleniumcucumber.pages.AbstractPage;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import info.seleniumcucumber.pages.AbstractPage;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

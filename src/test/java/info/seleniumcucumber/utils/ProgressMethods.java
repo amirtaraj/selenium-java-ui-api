@@ -1,9 +1,10 @@
 package info.seleniumcucumber.utils;
 
-import info.seleniumcucumber.pages.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import info.seleniumcucumber.pages.AbstractPage;
 
 public class ProgressMethods extends AbstractPage implements BaseTest {
 

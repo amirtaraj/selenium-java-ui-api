@@ -1,10 +1,11 @@
 package info.seleniumcucumber.steps;
 
-import info.seleniumcucumber.pages.AbstractPage;
-import info.seleniumcucumber.utils.TestCaseFailed;
 import io.cucumber.java.en.Then;
 
 import java.io.IOException;
+
+import info.seleniumcucumber.pages.AbstractPage;
+import info.seleniumcucumber.utils.TestCaseFailed;
 
 public class UiStepDefinitions extends AbstractPage {
     // Navigation Steps

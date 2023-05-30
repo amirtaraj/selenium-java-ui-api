@@ -1,13 +1,14 @@
 package info.seleniumcucumber.steps;
 
-import info.seleniumcucumber.pages.AbstractPage;
-import info.seleniumcucumber.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import info.seleniumcucumber.utils.RestUtils;
+
+import info.seleniumcucumber.pages.AbstractPage;
+import info.seleniumcucumber.pages.LoginPage;
 import info.seleniumcucumber.utils.ConfigUtils;
+import info.seleniumcucumber.utils.RestUtils;
 import io.restassured.response.Response;
 import static org.junit.Assert.assertEquals;
 import java.io.IOException;

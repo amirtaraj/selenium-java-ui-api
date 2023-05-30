@@ -1,12 +1,14 @@
 package info.seleniumcucumber.utils;
 
 import com.paulhammant.ngwebdriver.NgWebDriver;
+
 import info.seleniumcucumber.utils.expectedConditions.ClickabilityOfElement;
 import info.seleniumcucumber.utils.expectedConditions.ClickabilityOfElementByLocator;
 import info.seleniumcucumber.utils.expectedConditions.InvisibilityOfElement;
 import info.seleniumcucumber.utils.expectedConditions.InvisibilityOfElementByLocator;
 import info.seleniumcucumber.utils.expectedConditions.VisibilityOfElement;
 import info.seleniumcucumber.utils.expectedConditions.VisibilityOfElementByLocator;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.ScriptTimeoutException;

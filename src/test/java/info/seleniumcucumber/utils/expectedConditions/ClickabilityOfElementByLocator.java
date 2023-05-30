@@ -1,6 +1,5 @@
 package info.seleniumcucumber.utils.expectedConditions;
 
-import info.seleniumcucumber.utils.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
@@ -11,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+
+import info.seleniumcucumber.utils.Constants;
 
 import java.time.Duration;
 
