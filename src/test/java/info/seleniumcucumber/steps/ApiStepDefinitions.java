@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-
+import org.hamcrest.Matchers;
 import info.seleniumcucumber.pages.AbstractPage;
 import info.seleniumcucumber.pages.LoginPage;
 import info.seleniumcucumber.utils.ConfigUtils;
@@ -75,4 +75,17 @@ public class ApiStepDefinitions extends AbstractPage {
     public void deleteRequest(){
         response = RestUtils.performDeleteRequest();
     }
+
+   
+    @Then("^I should get \"([^\"]*)\" as \"([^\"]*)\"$")
+    public void validateFieldValue(String field, String expectedValue) {
+    String jsonPath = field.replaceAll("\"", "");
+    if (expectedValue.matches("-?\\d+")) {
+        response.then().assertThat().body(jsonPath, Matchers.equalTo(Integer.parseInt(expectedValue)));
+    } else {
+        response.then().assertThat().body(jsonPath, Matchers.equalTo(expectedValue));
+    }
+    }
+
+   
 }

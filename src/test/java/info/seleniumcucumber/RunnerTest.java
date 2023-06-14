@@ -16,7 +16,8 @@ import org.junit.runner.RunWith;
         },
         glue = {"info.seleniumcucumber.steps"
         },
-        features = {"classpath:features"}
+        features = {"classpath:features"},
+        tags = {"@api"}
 )
 public class RunnerTest {
 }

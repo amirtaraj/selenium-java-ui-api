@@ -1,7 +1,7 @@
 Feature: ODNxt UI Test
   As a user I should able to navigate to ODNXT app
 
-  @smoke
+  @ui
   Scenario: Dashboard Page
     Given I navigate to "https://odnxt-web-automation-template.azurewebsites.net/"
     Then I wait for 2 sec

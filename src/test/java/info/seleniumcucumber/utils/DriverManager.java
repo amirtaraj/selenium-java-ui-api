@@ -41,7 +41,7 @@ public class DriverManager {
      * @return webdriver
      */
     private static WebDriver chooseDriver() {
-        String preferredDriver = System.getProperty("browser", "Firefox");
+        String preferredDriver = System.getProperty("browser", "Chrome");
         boolean headless = System.getProperty("headless", "false").equals("true");
 
         switch (preferredDriver.toLowerCase()) {
@@ -49,7 +49,7 @@ public class DriverManager {
                 return new SafariDriver();
             case "edge":
                 return new EdgeDriver();
-            case "chrome":
+            case "Firefox":
                 final ChromeOptions chromeOptions = new ChromeOptions(); 
 
                 if (headless) {
@@ -67,12 +67,12 @@ public class DriverManager {
 
                 return new ChromeDriver(chromeOptions);
             default:
-                final FirefoxOptions ffOptions = new FirefoxOptions();
+                final ChromeOptions COptions = new ChromeOptions();
 
                 if (headless) {
-                    ffOptions.setHeadless(true);
+                    COptions.setHeadless(true);
                 }
-                return new FirefoxDriver(ffOptions);
+                return new ChromeDriver(COptions);
         }
     }
 
