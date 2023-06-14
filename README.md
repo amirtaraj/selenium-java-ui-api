@@ -1,3 +1,24 @@
+### READ-ME
+
+To run `mvn clean test`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### selenium-cucumber-java
 
 This repository contains a collection of sample `selenium-cucumber-java` projects and libraries that demonstrate how to
