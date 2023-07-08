@@ -24,6 +24,6 @@ public class ConfigurationMethods extends AbstractPage {
 
         Capabilities cap = (Capabilities) ((RemoteWebDriver) getDriver()).getCapabilities();
         System.out.println("Browser : " + cap.getBrowserName());
-        System.out.println("Platform : " + cap.getPlatform());
+       // System.out.println("Platform : " + cap.getPlatform());
     }
 }

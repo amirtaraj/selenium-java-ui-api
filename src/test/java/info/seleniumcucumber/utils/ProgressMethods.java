@@ -1,4 +1,6 @@
 package info.seleniumcucumber.utils;
+import java.time.Duration;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,9 +21,10 @@ public class ProgressMethods extends AbstractPage implements BaseTest {
      */
     public void waitForElementToDisplay(String accessType, String accessName, String duration) {
         By byEle = selectElementByType.getelementbytype(accessType, accessName);
-        WebDriverWait wait = (new WebDriverWait(getDriver(), Integer.parseInt(duration) * 1000L));
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(Integer.parseInt(duration)));
         wait.until(ExpectedConditions.visibilityOfElementLocated(byEle));
     }
+    
 
     /**
      * Method to Explicitly wait for element to be enabled=click
@@ -32,7 +35,7 @@ public class ProgressMethods extends AbstractPage implements BaseTest {
      */
     public void waitForElementToClick(String accessType, String accessName, String duration) {
         By byEle = selectElementByType.getelementbytype(accessType, accessName);
-        WebDriverWait wait = (new WebDriverWait(getDriver(), Integer.parseInt(duration) * 1000L));
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(Integer.parseInt(duration)));
         wait.until(ExpectedConditions.elementToBeClickable(byEle));
     }
 

@@ -48,6 +48,7 @@ public class DriverManager {
             case "safari":
                 return new SafariDriver();
             case "edge":
+                //WebDriverManager.edgedriver().setup();
                 return new EdgeDriver();
             case "Firefox":
                 final ChromeOptions chromeOptions = new ChromeOptions(); 

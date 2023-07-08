@@ -1,7 +1,7 @@
 package info.seleniumcucumber.utils.expectedConditions;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +34,7 @@ public class ClickabilityOfElementByLocator implements ExpectedCondition<WebElem
 
         try {
             return wait.until(ExpectedConditions.elementToBeClickable(locator));
-        } catch (StaleElementReferenceException | NoSuchElementException | ElementNotVisibleException e) {
+        } catch (StaleElementReferenceException | NoSuchElementException | ElementNotInteractableException e) {
             return webDriver.findElement(locator);
         } catch (Throwable t) {
             throw new Error(t);
