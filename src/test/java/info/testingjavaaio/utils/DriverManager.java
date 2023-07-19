@@ -14,7 +14,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
-import io.appium.java_client.android.AndroidDriver;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -76,12 +76,6 @@ public class DriverManager {
         case "safari":
             SafariOptions safariOptions = new SafariOptions();
             return new SafariDriver(safariOptions);
-        case "android":
-            WebDriverManager.androiddriver().setup();
-            return new AndroidDriver();
-        case "ios":
-            WebDriverManager.iosdriver().setup();
-            return new IOSDriver();
         default:
             System.out.println("Unsupported browser: " + preferredDriver);
             System.exit(0);
