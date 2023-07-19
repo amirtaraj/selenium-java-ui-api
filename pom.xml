@@ -137,6 +137,12 @@
             <version>2.10.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
+        </dependency>
+
         <!-- These are the Spark Reporting dependencies -->
         <dependency>
             <artifactId>extentreports-cucumber4-adapter</artifactId>
